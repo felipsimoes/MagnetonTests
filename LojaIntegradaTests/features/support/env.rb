@@ -13,6 +13,14 @@ require 'chunky_png'
 require 'os'
 require 'faker'
 
+$LOAD_PATH << './features'
+
+require 'pages/newsletter_section'
+
+Dir[File.expand_path('features/pages/', __FILE__)].each do |file|
+  require file
+end
+
 BROWSER = ENV['BROWSER']
 ENVIRONMENT_TYPE = ENV['ENVIRONMENT_TYPE']
 

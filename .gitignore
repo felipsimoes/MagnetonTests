@@ -4,3 +4,8 @@ screenshots/diffs
 screenshots/current_images
 .DS_Store
 .gitkeep
+.yardoc/
+doc/
+
+#Loja Integrada
+LojaIntegradaTests/screenshots/

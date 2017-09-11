@@ -23,6 +23,7 @@ class CadastroPage < SitePrism::Page
   element :criar_conta_button, "#formCadastroCompleto > form > div.acao-editar.row-fluid > div > button"
 
   element :criado_sucesso, "#corpo > div > div.alert.alert-success.alert-geral"
+  element :validacao_senha, "#formCadastroCompleto > form > div.dados-acesso.row-fluid > div > div > fieldset > div:nth-child(4) > div:nth-child(1) > span > ul > li"
 
   def criar_pessoa_fisica
     nome.set Faker::Name.name
@@ -30,7 +31,7 @@ class CadastroPage < SitePrism::Page
     page.execute_script("$('#id_telefone_celular').val('13988458428');")
     page.execute_script("$('#id_cep').val('11030-540');")
     page.execute_script("$('#id_cep').keyup();")
-    sleep(2)
+    sleep(4)
     numero.set "145"
 
     criar_conta_button.click

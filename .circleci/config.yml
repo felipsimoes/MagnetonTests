@@ -31,10 +31,17 @@ jobs:
           command: |
             bundle install --jobs=4 --retry=3 #--path vendor/bundle
 
+<<<<<<< HEAD
       - save_cache:
           paths:
             - ./vendor/bundle
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+=======
+      # - save_cache:
+      #     paths:
+      #       - ./vendor/bundle
+      #     key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+>>>>>>> cf3c063d770eecd369d9b8a2bba5b67694c1c037
         
       # Database setup
       # - run: bundle exec rake db:create

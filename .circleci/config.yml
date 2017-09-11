@@ -30,4 +30,4 @@ jobs:
           name: run tests
           command: |
             cd LojaIntegradaTests
-            bundle exec cucumber
+            rake test_poltergeist_dev

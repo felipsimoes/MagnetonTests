@@ -18,6 +18,7 @@ jobs:
 
     steps:
       - checkout
+      - cd LojaIntegradaTests
 
       # Download and cache dependencies
       - restore_cache:
@@ -29,37 +30,13 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            bundle install --jobs=4 --retry=3 #--path vendor/bundle
-
-<<<<<<< HEAD
-      - save_cache:
-          paths:
-            - ./vendor/bundle
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
-=======
-      # - save_cache:
-      #     paths:
-      #       - ./vendor/bundle
-      #     key: v1-dependencies-{{ checksum "Gemfile.lock" }}
->>>>>>> cf3c063d770eecd369d9b8a2bba5b67694c1c037
-        
-      # Database setup
-      # - run: bundle exec rake db:create
-      # - run: bundle exec rake db:schema:load
+            bundle install --jobs=4 --retry=3
 
       # run tests!
       - run:
           name: run tests
           command: |
             bundle exec cucumber
-            # mkdir /tmp/test-results
-            # TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)"
-            
-            # bundle exec rspec --format progress \
-            #                 --format RspecJunitFormatter \
-            #                 --out /tmp/test-results/rspec.xml \
-            #                 --format progress \
-            #                 "${TEST_FILES}"
 
       # collect reports
       # - store_test_results:

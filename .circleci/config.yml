@@ -18,7 +18,6 @@ jobs:
 
     steps:
       - checkout
-      - cd LojaIntegradaTests
 
       # Download and cache dependencies
       - restore_cache:
@@ -30,6 +29,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
+            cd LojaIntegradaTests
             bundle install --jobs=4 --retry=3
 
       # run tests!

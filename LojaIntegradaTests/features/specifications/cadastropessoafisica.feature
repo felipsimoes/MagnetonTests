@@ -13,9 +13,4 @@ Funcionalidade: Criar usuário de Pessoa Física
     Quando eu preencho os campos obrigatórios
     Então eu visualizo a confirmação de cadastro
 
-# Campos obrigatórios: Nome Completo, CPF, Celular, CEP, Endereço, Número, Bairro, Cidade
-# Os campos Endereço, Bairro e Cidade devem ser auto-preenchidos quando se informar o CEP;
 # A senha precisa ter no mínimo 5 caracteres
-
-# No final do processo é exibida a mensagem: "Cliente criado com sucesso."
-# Campo CPF, Celular e CEP deve aceitar apenas números

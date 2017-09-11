@@ -25,14 +25,15 @@ class CadastroPage < SitePrism::Page
   element :criado_sucesso, "#corpo > div > div.alert.alert-success.alert-geral"
 
   def criar_pessoa_fisica
-    criar_dados_identificacao 
-
     nome.set Faker::Name.name
-    cpf.set Faker::Number.number(11)
-    celular.set '13' + Faker::Number.number(9)
-    cep.set '11055001'
-    numero.set Faker::Number.number(3)
-  
+    page.execute_script("$('#id_cpf').val('396.706.778-58');")
+    page.execute_script("$('#id_telefone_celular').val('13988458428');")
+    page.execute_script("$('#id_cep').val('11030-540');")
+    page.execute_script("$('#id_cep').keyup();")
+    sleep(2)
+    numero.set "145"
+
+    criar_conta_button.click
   end
 
   def criar_dados_identificacao (email, senha)

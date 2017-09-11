@@ -1,14 +1,15 @@
 ######### DADO #########
 Dado(/^que eu esteja na página de Cadastro$/) do
-  $home.load
-  @email = $home.getEmail
-  @senha = $home.getSenha
+  @home = Pages.home
+  @home.load
+  @email = @home.getEmail
+  @senha = @home.getSenha
   @cadastro = CadastroPage.new
 end
 
 ######### QUANDO #########
 Quando(/^eu preencho os campos obrigatórios$/) do
-  $home.conteudo_topo.minha_conta_link.click
+  @home.conteudo_topo.minha_conta_link.click
   @login = LoginPage.new
   @login.email_cadastrar_field.set @email
   @login.cadastrar_btn.click

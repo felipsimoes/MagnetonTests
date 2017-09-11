@@ -8,6 +8,7 @@ Funcionalidade: Criar usuário de Pessoa Física
     #Quando eu preencho o email e clico em cadastrar
     #Então eu vou para a página de preenchimento de dados
 
+  @cadastro @pf
   Cenario: Cadastro de Pessoa Física
     Quando eu preencho os campos obrigatórios
     Então eu visualizo a confirmação de cadastro

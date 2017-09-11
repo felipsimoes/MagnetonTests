@@ -7,11 +7,20 @@ class HomePage < SitePrism::Page
 
   def initialize
     @email = Faker::Internet.email
+    @senha = Faker::Internet.password(8)
   end
 
   def cadastrar_newsletter
     newsletter.email_field.set @email
     newsletter.button.click
+  end
+
+  def getEmail
+    @email
+  end
+
+  def getSenha
+    @senha
   end
 
 end

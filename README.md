@@ -1,5 +1,5 @@
 # MagnetonTests
-![Build Status](https://circleci.com/gh/felipsimoes/MagnetonTests.svg?style=shield&circle-token=:circle-token)
+[![Build Status](https://circleci.com/gh/felipsimoes/MagnetonTests.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/felipsimoes/MagnetonTests)
 
 This project uses [SitePrism](https://github.com/natritmeyer/site_prism/) implementation for Page Object Pattern and its concept of Sections
 

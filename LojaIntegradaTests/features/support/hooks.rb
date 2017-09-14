@@ -1,8 +1,9 @@
 require_relative 'helper.rb'
 
-Before do |feature|
+Before do ||
   ## variable which loads the data file according to the environment
-  CONFIG = YAML.load_file(File.dirname(__FILE__) + "/config/#{ENVIRONMENT_TYPE}.yaml")
+  CONFIG = YAML.load_file(File.dirname(__FILE__)
+                              .concat("/config/#{ENVIRONMENT_TYPE}.yaml"))
 
   I18n.config.available_locales = :en
 
@@ -14,7 +15,9 @@ Before do |feature|
   ## set default max wait and maximize browser
   Capybara.default_max_wait_time = 60
   unless BROWSER.eql?('poltergeist')
-    Capybara.current_session.driver.browser.manage.window.maximize
+    Capybara.current_session
+            .driver
+            .maximize_window(page.driver.current_window_handle)
   end
 end
 

@@ -1,9 +1,23 @@
 # MagnetonTests
 [![Build Status](https://circleci.com/gh/felipsimoes/MagnetonTests.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/felipsimoes/MagnetonTests)
 
+This project uses [Magneton](https://chocolatey.org/packages/selenium-all-drivers) A gem to generate all files needed in a project that will support Cucumber, SitePrism, Capybara and Selenium
+
 This project uses [SitePrism](https://github.com/natritmeyer/site_prism/) implementation for Page Object Pattern and its concept of Sections
 
 It also use [Faker](https://github.com/stympy/faker) to generate random data
+
+## Running on Windows
+In order to configure the web browsers drivers in Windows environment I found great value in the following Chocolatey package
+
+[agabrys chocolatey pkg](https://chocolatey.org/packages/selenium-all-drivers)
+
+It brings all the following drivers:
+- Gecko (e.g. Firefox)
+- Google Chrome
+- Internet Explorer
+- Microsoft Edge
+- Opera
 
 ## Project peculiarities
 ### Loja Integrada
